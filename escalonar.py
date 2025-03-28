@@ -74,9 +74,9 @@ def round_robin():
 if __name__ == '__main__': 
 
     while True:
-        print('\n1 - FCFS: First Come, First Served')
-        print('2 - RR: Round Robin')
-        print('3- Sair')
+        print("\nEscolha o algoritmo de escalonamento:")
+        for indice, possibilidade in enumerate(['FCFS', 'Round Robin', 'Sair'], start = 1): 
+            print(f"{indice} - {possibilidade}")
         opcao = int(input('Escolha uma opção: '))
 
         if opcao == 1:
@@ -84,6 +84,8 @@ if __name__ == '__main__':
         elif opcao == 2:
             round_robin()
         elif opcao == 3:
+            print('Saindo...')
+            time.sleep(2)
             exit(False)
         else: 
             print('Opção inválida')
